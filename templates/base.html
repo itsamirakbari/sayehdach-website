@@ -88,21 +88,39 @@
                     SAYEHDACH steht für hochwertige Dacharbeiten, Sanierungen und Reparaturen in Trier und Umgebung.
                 </p>
 
-                <p>
-                    📞 <a href="tel:017622296286">0176 22296286</a><br>
-                    📧 <a href="mailto:info@sayehdach.de">info@sayehdach.de</a>
+                <p class="footer-contact">
+                    <span>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:017622296286">0176 22296286</a>
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@sayehdach.de">info@sayehdach.de</a>
+                    </span>
                 </p>
 
             </div>
 
             <div class="footer-nav">
+
                 <a href="https://www.instagram.com/sayehdach"
                    target="_blank"
                    rel="noopener noreferrer">
-                   Instagram
+                    <i class="fa-brands fa-instagram"></i>
+                    Instagram
                 </a>
-                <a href="{{ url_for('datenschutz') }}">Datenschutz</a>
-                <a href="{{ url_for('impressum') }}">Impressum</a>
+
+                <a href="{{ url_for('datenschutz') }}">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Datenschutz
+                </a>
+
+                <a href="{{ url_for('impressum') }}">
+                    <i class="fa-solid fa-file-lines"></i>
+                    Impressum
+                </a>
+
             </div>
 
         </div>
