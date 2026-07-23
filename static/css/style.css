@@ -1,0 +1,1126 @@
+/* ==========================
+   SAYEHDACH Design System
+   ========================== */
+
+/* ==========================
+   Colors
+   ========================== */
+
+:root {
+    --primary-color: #F16522;
+    --primary-hover-color: #D9541A;
+    --text-color: #1A1A1A;
+    --background-color: #FFFFFF;
+    --surface-color: #F5F5F5;
+    --border-color: #DDDDDD;
+}
+
+/* ==========================
+   Global Styles
+   ========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Inter", sans-serif;
+}
+
+/* ==========================
+   Flash Message
+   ========================== */
+
+.flash-message {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 15px 20px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+/* ==========================
+   Header
+   ========================== */
+
+header {
+    background-color: #1A1A1A;
+    padding: 0;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* ==========================
+   Container
+   ========================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================
+   Header Content
+   ========================== */
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    position: relative;
+}
+
+/* ==========================
+   Logo
+   ========================== */
+
+.logo img {
+    height: 120px;
+    width: auto;
+    position: relative;
+    top: 8px;
+    filter: drop-shadow(0 4px 10px rgba(255,255,255,0.25));
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================
+   Navigation
+   ========================== */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* ==========================
+   Hero
+   ========================== */
+
+.hero {
+    padding: 80px 0;
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+/* ==========================
+   Hero Content
+   ========================== */
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1;
+    transform: translateY(-60px);
+}
+
+.hero-text {
+    width: 55%;
+}
+
+.hero-content h1,
+.hero-content p {
+    color: #FFFFFF;
+}
+
+.hero-content h1,
+.hero-content p {
+    text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+
+.hero-text {
+    flex: 0 0 50%;
+    max-width: 600px;
+}
+
+/* ==========================
+   Hero Heading
+   ========================== */
+
+.hero-content h1 {
+    font-size: 4.2rem;
+    line-height: 1.05;
+    margin-bottom: 25px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.hero-content h1 strong {
+    display: block;
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 5px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #ff7a1a;
+    font-weight: 900;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.7);
+    font-size: 2.2rem;
+    margin-top: -10px;
+    text-align: center;
+}
+
+/* ==========================
+   Hero Text
+   ========================== */
+
+.hero-content p {
+    color: #F5F5F5;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+/* ==========================
+   Hero Buttons
+   ========================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* ==========================
+   Primary Button
+   ========================== */
+
+.btn-primary {
+    display: inline-block;
+    background-color: #1A1A1A;
+    padding: 10px 18px;
+    white-space: nowrap;
+    color: var(--background-color);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #F16522;
+}
+
+/* ==========================
+   Secondary Button
+   ========================== */
+
+.btn-secondary {
+    background-color: rgba(241, 101, 34, 0.15);
+    border: 2px solid var(--primary-color);
+    padding: 10px 18px;
+    white-space: nowrap;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease,
+            color 0.3s ease,
+            border-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+/* ==========================
+   Services
+   ========================== */
+
+.services {
+    padding: 40px 0 30px;
+    background-image:
+        linear-gradient(
+            rgba(236, 234, 229, 0.85),
+            rgba(236, 234, 229, 0.85)
+        ),
+        url("../images/roof_material.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ==========================
+   Services Content
+   ========================== */
+
+.services-content {
+    text-align: center;
+}
+
+/* ==========================
+   Services Heading
+   ========================== */
+
+.services-content h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* ==========================
+   Services Text
+   ========================== */
+
+.services-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* ==========================
+   Services Grid
+   ========================== */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* ==========================
+   Service Card
+   ========================== */
+
+.service-card {
+    background-color: rgba(239, 237, 232, 0.92);
+    backdrop-filter: blur(10px);
+    padding: 35px 30px;
+    border-radius: 18px;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.12);
+
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    border-top: 3px solid #F16522;
+}
+
+/* ==========================
+   Service Card Heading
+   ========================== */
+
+.service-card h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 750;
+    color: #2B2B2B;
+    letter-spacing: 0.2px;
+    position: relative;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.service-card h3::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background-color: #F16522;
+    margin-top: 10px;
+}
+
+/* ==========================
+   Service Card Text
+   ========================== */
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* ==========================
+   Service Card Button
+   ========================== */
+
+.service-card .btn-primary {
+    background-color: #5A5A5A;
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.service-card .btn-primary:hover {
+    background-color: #F16522;
+    transform: translateY(-2px);
+}
+
+/* ==========================
+   About
+   ========================== */
+
+.about {
+    padding: 40px 0 0px;
+    background-image:
+        linear-gradient(
+            rgba(247,247,245,0.92),
+            rgba(247,247,245,0.92)
+        ),
+        url("../images/roof_material.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* ==========================
+   About Content
+   ========================== */
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+/* ==========================
+   About Text
+   ========================== */
+
+.about-text {
+    flex: 1;
+}
+
+/* ==========================
+   About Heading
+   ========================== */
+
+.about-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.about-text h2 .brand-name {
+    background: linear-gradient(
+        90deg,
+        #111111,
+        #F16522
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-shadow:
+        0 4px 10px rgba(0,0,0,0.25);
+}
+
+.about-text h2 small {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* ==========================
+   About Text Paragraph
+   ========================== */
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* ==========================
+   About Image
+   ========================== */
+
+.about-image {
+    flex: 1;
+}
+
+/* ==========================
+   About Image Element
+   ========================== */
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* ==========================
+   Gallery
+   ========================== */
+
+.gallery {
+    padding: 30px 0 40px;
+    background-image:
+        linear-gradient(
+            rgba(247,247,245,0.94),
+            rgba(236,234,229,0.94)
+        ),
+        url("../images/roof_material.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery-content {
+    text-align: center;
+}
+
+.gallery-content h2 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.gallery-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* ==========================
+   Gallery Item
+   ========================== */
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ==========================
+   Contact
+   ========================== */
+
+.contact {
+    padding: 40px 0 10px;
+    background-image:
+        linear-gradient(
+            rgba(247,247,245,0.94),
+            rgba(247,247,245,0.94)
+        ),
+        url("../images/roof_material.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* ==========================
+   Contact Content
+   ========================== */
+
+.contact-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* ==========================
+   Contact Info
+   ========================== */
+
+.contact-info {
+    flex: 1;
+}
+
+/* ==========================
+   Contact Heading
+   ========================== */
+
+.contact-info h2 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+
+/* ==========================
+   Contact Text
+   ========================== */
+
+.contact-details p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #222222;
+    margin-bottom: 8px;
+}
+/* ==========================
+   Contact Details
+   ========================== */
+
+.contact-details {
+    margin-top: 10px;
+}
+
+/* ==========================
+   Contact Details Text
+   ========================== */
+
+.contact-details i {
+    color: var(--primary-color);
+    width: 25px;
+    margin-right: 5px;
+}
+
+/* ==========================
+   Contact Image
+   ========================== */
+
+.contact-image {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-image img {
+    width: 100%;
+    max-width: 550px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.trust-box {
+    margin-top: 25px;
+}
+
+.trust-box ul {
+    list-style: none;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.trust-box li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.trust-box i {
+    color: #28a745;
+    font-size: 1.3rem;
+}
+
+/* ==========================
+   Contact Form
+   ========================== */
+
+.contact-form {
+    flex: 1;
+    background-color: #FFF7F2;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ==========================
+   Contact Form Heading
+   ========================== */
+
+.contact-form h2 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+
+/* ==========================
+   Contact Form Element
+   ========================== */
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* ==========================
+   Contact Labels
+   ========================== */
+
+.contact-form label {
+    margin-bottom: 2px;
+    font-weight: 500;
+}
+
+/* ==========================
+   Contact Inputs
+   ========================== */
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.contact-form input[type="file"] {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+}
+
+.contact-form input[type="file"]:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(241, 101, 34, 0.2);
+}
+
+.contact-form textarea {
+    min-height: 100px;
+}
+
+/* ==========================
+   Contact Input Focus
+   ========================== */
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(241, 101, 34, 0.2);
+}
+
+/* ==========================
+   Contact Submit Button
+   ========================== */
+
+.contact-form button {
+    background-color: var(--primary-color);
+    cursor: pointer;
+    align-self: flex-start;
+    border: none;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.contact-form button.btn-primary {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    margin-top: 15px;
+}
+
+.contact-form button:hover {
+    background-color: var(--primary-hover-color);
+    transform: translateY(-2px);
+}
+
+/* ==========================
+   Contact Submit Button Focus
+   ========================== */
+
+.contact-form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(241, 101, 34, 0.2);
+}
+
+/* ==========================
+   Contact Privacy Text
+   ========================== */
+
+.contact-form .privacy-text {
+    font-size: 0.7rem;
+    color: #666666;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+/* ==========================
+   Footer
+   ========================== */
+
+.footer {
+    padding: 20px 0;
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+}
+
+/* ==========================
+   Footer Content
+   ========================== */
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* ==========================
+   Footer Text
+   ========================== */
+
+.footer-text {
+    flex: 1;
+    line-height: 1.6;
+    font-size: 0.80rem;
+    text-align: left;
+}
+
+.footer-text p {
+    margin-bottom: 10px;
+}
+
+.footer-text p:first-child {
+    font-size: 0.80rem;
+    font-weight: 300;
+}
+
+.footer-text p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #aaaaaa;
+    margin: 0;
+}
+/* ==========================
+   Footer Navigation
+   ========================== */
+
+.footer-nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+/* ==========================
+   Footer Navigation Links
+   ========================== */
+
+.footer-nav a {
+    color: var(--background-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--primary-color);
+}
+
+.footer-nav a:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(241, 101, 34, 0.2);
+    border-radius: 4px;
+}
+
+.footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer a:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none;
+    transition: transform 0.3s ease;
+}
+
+/* ==========================
+   Legal Pages (Datenschutz / Impressum)
+   ========================== */
+
+.legal-page {
+    padding: 60px 0;
+    background-image:
+        linear-gradient(
+            rgba(247,247,245,0.94),
+            rgba(236,234,229,0.94)
+        ),
+        url("../images/roof_material.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.legal-content {
+    background-color: rgba(255,255,255,0.92);
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.legal-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+
+.legal-content h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.legal-content p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   Responsive Design
+   ========================== */
+
+@media (max-width: 992px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .footer-text {
+        text-align: center;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        border: none;
+        background: none;
+        color: #FFFFFF;
+    }
+
+    .logo img {
+        height: 85px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+        position: absolute;
+        top: 65px;
+        right: 20px;
+        width: 240px;
+        background-color: #1A1A1A;
+        padding: 20px;
+        border-radius: 0 0 15px 15px;
+        z-index: 1000;
+    }
+
+    nav.active ul {
+        flex-direction: column;
+        gap: 0;
+        align-items: stretch;
+    }
+
+    nav.active li {
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    nav.active a {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 10px;
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        transform: translateY(-40px);
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h1 strong {
+        font-size: 1.6em;
+        letter-spacing: 3px;
+    }
+
+    .hero-content h1 span {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .about-content {
+        gap: 30px;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .contact-content {
+        gap: 30px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .footer-content {
+        gap: 20px;
+    }
+
+    .footer-nav {
+        gap: 10px;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        width: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .btn-primary {
+        width: 250px;
+        text-align: center;
+        padding: 12px 10px;
+        font-size: 0.8rem;
+    }
+
+    .btn-secondary {
+        width: 170px;
+        text-align: center;
+        padding: 12px 10px;
+        font-size: 0.8rem;
+    }
+
+    .gallery-grid {
+    grid-template-columns: 1fr;
+    }
+    }

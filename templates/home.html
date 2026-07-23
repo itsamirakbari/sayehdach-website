@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section id="home" class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <h1>
+                    <strong>SAYEHDACH</strong>
+                    <span>Qualität über dem Dach</span>
+                </h1>
+
+                <p>
+                    Ihr Dachdeckermeisterbetrieb in Trier und Umgebung
+                    für hochwertige Dacharbeiten, Sanierungen und Reparaturen.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#contact" class="btn-primary">
+                        Kostenlose Besichtigung anfragen
+                    </a>
+
+                    <a href="tel:017622296286" class="btn-secondary">
+                        Jetzt anrufen
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="services" class="services">
+    <div class="container">
+        <div class="services-content">
+            <h2>Unsere Leistungen</h2>
+
+            <p>Fachgerechte Dachlösungen für langfristigen Schutz und Qualität.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Flachdach Sanierung</h3>
+
+                    <p>Professionelle Sanierung von Flachdächern für langfristigen Schutz und zuverlässige Abdichtung.</p>
+
+                    <a href="#contact" class="btn-primary">Beratung anfragen</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>Dachreparaturen</h3>
+
+                    <p>Zuverlässige Reparaturen bei Schäden und Undichtigkeiten für einen sicheren Schutz Ihres Daches.</p>
+
+                    <a href="#contact" class="btn-primary">Beratung anfragen</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>Dachabdichtung</h3>
+
+                    <p>Fachgerechte Abdichtung von Dächern für zuverlässigen Schutz vor Feuchtigkeit und Witterung.</p>
+
+                    <a href="#contact" class="btn-primary">Beratung anfragen</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>Dachrinnen Reinigung & Reparatur</h3>
+
+                    <p>Professionelle Reinigung und Reparatur von Dachrinnen für eine sichere und zuverlässige Entwässerung.</p>
+
+                    <a href="#contact" class="btn-primary">Beratung anfragen</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>Flachdach Arbeiten</h3>
+
+                    <p>Professionelle Arbeiten rund um Flachdächer – von Abdichtung bis zur Sanierung für zuverlässigen Schutz.</p>
+
+                    <a href="#contact" class="btn-primary">Beratung anfragen</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>Dach Check & Beratung</h3>
+
+                    <p>Persönliche Beratung und Besichtigung Ihres Daches zur Einschätzung notwendiger Arbeiten und Lösungen.</p>
+
+                    <a href="#contact" class="btn-primary">Beratung anfragen</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>
+                    <span class="brand-name">SAYEHDACH</span>
+                    <small>Qualität über dem Dach</small>
+                </h2>
+
+                <p>SAYEHDACH steht für zuverlässige Dacharbeiten, hochwertige Lösungen und persönlichen Service. Als Dachdeckermeisterbetrieb in Trier begleiten wir unsere Kunden von der ersten Beratung bis zur fachgerechten Umsetzung.</p>
+
+                <p>Unser Anspruch ist es, Qualität, Transparenz und saubere Arbeit miteinander zu verbinden. Mit Erfahrung und Leidenschaft sorgen wir dafür, dass Ihr Dach langfristig sicher und geschützt bleibt.</p>
+
+            </div>
+
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='images/about.jpg') }}"
+                     alt="Professioneller Dachdecker bei der Arbeit">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="gallery">
+    <div class="container">
+        <div class="gallery-content">
+
+            <h2>Unsere Dachprojekte</h2>
+
+            <p>Ausgewählte Projekte, bei denen Qualität, Präzision und Erfahrung sichtbar werden.</p>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='images/project-1.jpg') }}"
+                        alt="Dachsanierung Projekt">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='images/project-2.jpg') }}"
+                        alt="Dachreparatur Projekt">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='images/project-3.jpg') }}"
+                         alt="Dacharbeiten Projekt">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Kontakt aufnehmen</h2>
+
+                <p>Sie planen eine Dachsanierung oder benötigen eine Reparatur? Wir beraten Sie gerne persönlich und finden die passende Lösung.</p>
+
+                <div class="contact-details">
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Kordelstraße 48, 54294 Trier, Deutschland
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        0176 22296286
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        info@sayehdach.de
+                    </p>
+                </div>
+
+                <div class="contact-image">
+                    <img src="{{ url_for('static', filename='images/contact-consultation.jpg') }}"
+                         alt="Beratungsgespräch mit Kunde">
+                </div>
+
+                <div class="trust-box">
+
+                    <h3>Qualität, auf die Sie zählen können</h3>
+
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Persönliche Beratung
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Kostenlose Besichtigung
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Fachgerechte Lösungen
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Qualität rund ums Dach
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="contact-form">
+                <h2>Kostenlose Beratung anfragen</h2>
+
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="flash-message">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <form action="/contact" method="POST" enctype="multipart/form-data">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Ihr Name">
+
+                    <label for="email">E-Mail</label>
+                    <input id="email" name="email" type="email" placeholder="Ihre E-Mail">
+
+                    <label for="phone">Telefon</label>
+                    <input id="phone" name="phone" type="tel" placeholder="Ihre Telefonnummer">
+
+                    <label for="subject">Betreff</label>
+                    <input id="subject" name="subject" type="text" placeholder="Betreff">
+
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" placeholder="Ihre Nachricht"></textarea>
+
+                    <p>Fotos oder PDF-Dateien hochladen (optional)</p>
+
+                    <label for="file">Datei hochladen</label>
+                    <input id="file" name="file" type="file" multiple>
+
+                    <button type="submit" class="btn-primary" aria-label="Nachricht senden">
+                        Anfrage senden
+                    </button>
+                </form>
+
+                <p class="privacy-text">
+                    Mit dem Absenden erklären Sie sich mit unserer
+                    <a href="{{ url_for('datenschutz') }}">Datenschutz</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

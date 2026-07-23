@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SAYEHDACH ist Ihr Dachdeckermeisterbetrieb in Trier und Umgebung für Dachsanierungen, Dachreparaturen, Dachabdichtungen und professionelle Dacharbeiten.">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>SAYEHDACH | Dachdecker in Trier und Umgebung</title>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <a href="{{ url_for('home') }}#home">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}"
+                        alt="SAYEHDACH Dachdeckermeisterbetrieb Logo">
+                </a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Menü öffnen">
+                ☰
+            </button>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{{ url_for('home') }}">
+                            <i class="fa-solid fa-house"></i>
+                            Startseite
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ url_for('home') }}#services">
+                            <i class="fa-solid fa-hammer"></i>
+                            Leistungen
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ url_for('home') }}#about">
+                            <i class="fa-solid fa-users"></i>
+                            Über uns
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ url_for('home') }}#gallery">
+                            <i class="fa-solid fa-images"></i>
+                            Galerie
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ url_for('home') }}#contact">
+                            <i class="fa-solid fa-phone"></i>
+                            Kontakt
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+  {% block content %}
+  {% endblock %}
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>
+                    SAYEHDACH steht für hochwertige Dacharbeiten, Sanierungen und Reparaturen in Trier und Umgebung.
+                </p>
+
+                <p>
+                    📞 <a href="tel:017622296286">0176 22296286</a><br>
+                    📧 <a href="mailto:info@sayehdach.de">info@sayehdach.de</a>
+                </p>
+
+            </div>
+
+            <div class="footer-nav">
+                <a href="https://www.instagram.com/sayehdach"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   Instagram
+                </a>
+                <a href="{{ url_for('datenschutz') }}">Datenschutz</a>
+                <a href="{{ url_for('impressum') }}">Impressum</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 SAYEHDACH Dachdeckermeisterbetrieb. Alle Rechte vorbehalten.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
